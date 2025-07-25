@@ -10,4 +10,10 @@ if ! grep -q "^APP_KEY=" /var/www/.env || grep -q "APP_KEY=$" /var/www/.env; the
     echo "🔑 Generated APP_KEY"
 fi
 
+php artisan migrate --force
+echo "📦 Applied migrations"
+
+php artisan db:seed --force
+echo "🌱 Seeded database"
+
 exec php artisan serve --host=0.0.0.0 --port=8000
