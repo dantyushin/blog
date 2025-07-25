@@ -14,7 +14,8 @@ COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
 
 COPY . .
 
-RUN composer install
+RUN composer install \
+    && php artisan key:generate
 
 EXPOSE 8000
 

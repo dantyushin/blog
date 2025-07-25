@@ -10,7 +10,7 @@
 
 ```
 
-/projects
+/project
 │
 ├── frontend/          # React + Vite SPA
 │   └── nginx/         # Nginx config
@@ -77,16 +77,17 @@ cd blog
 
 ### 3. ⚙️ Переменные окружения (Laravel)
 
-В `backend/.env` убедитесь, что путь к SQLite корректный:
+Переименуйте `.env.example` в `.env` в директории `/blog/backend`:
 
-```env
-DB_CONNECTION=sqlite
-DB_DATABASE=/var/www/database/database.sqlite
+```bash
+cd backend/
+mv .env.example .env
 ```
 
 ### 4. 🧱 Соберите и запустите контейнеры
 
 ```bash
+cd ..
 docker-compose up --build
 ```
 
