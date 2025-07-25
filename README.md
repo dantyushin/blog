@@ -99,7 +99,7 @@ docker-compose up --build
 
 | Компонент | URL                                                            |
 | --------- | -------------------------------------------------------------- |
-| Frontend  | [http://localhost:3000](http://localhost:3000)                           |
+| Frontend  | [http://localhost:8080](http://localhost:8080)                           |
 | Backend   | [http://localhost:8000/api/articles](http://localhost:8000/api/articles) |
 | SQLite DB | `/backend/database/database.sqlite`                            |
 
